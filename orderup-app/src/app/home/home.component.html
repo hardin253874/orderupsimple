@@ -1,0 +1,22 @@
+
+<div class="container">
+  <div class="row" style="margin-top: 30px">
+    <p *ngIf="homeImageUrls && homeImageUrls.length > 0" ><slideshow
+      [height]="'300px'"
+      [autoPlay]="true"
+      [showArrows]="false"
+      [imageUrls]="homeImageUrls"
+      [lazyLoad]="homeImageUrls?.length > 1"
+      [autoPlayWaitForLazyLoad]="true"></slideshow></p>
+    <hr>
+    <div class="col-md-3 col-xs-6"  *ngFor="let homeImage of homeImages">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ homeImage.name }}</h5>
+          <h6 class="card-subtitle">{{ homeImage.url }}</h6>
+          <p class="card-text">{{ homeImage.id }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
