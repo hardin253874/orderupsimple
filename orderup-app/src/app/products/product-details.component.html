@@ -1,1 +1,6 @@
-<div>{{image.name}}</div>
+<div *ngIf="image">
+  {{image.name}}
+  <button (click)="addToCart(image)">Add</button>
+</div>
+<div>{{imageId}}</div>
+<div> <a href="/cart">Go to cart</a></div>
