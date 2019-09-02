@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { homeImage } from '../models/homeImage';
 import { HomeService } from './home.service';
 import { environment } from '../../environments/environment';
+import { ProductAlertsComponent } from '../products/product-alerts.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -21,4 +22,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  onNotify(name: string) {
+    window.alert('Notify me ' + name);
+  }
 }
