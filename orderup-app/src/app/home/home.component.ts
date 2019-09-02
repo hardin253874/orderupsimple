@@ -3,6 +3,7 @@ import { homeImage } from '../models/homeImage';
 import { HomeService } from './home.service';
 import { environment } from '../../environments/environment';
 import { ProductAlertsComponent } from '../products/product-alerts.component';
+import { ProductDetailsComponent } from '../products/product-details.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

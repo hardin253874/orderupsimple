@@ -14,7 +14,15 @@
         <div class="card-body">
           <h5 class="card-title">{{ homeImage.name }}</h5>
           <h6 class="card-subtitle">{{ homeImage.url }}</h6>
-          <p class="card-text">{{ homeImage.id }}</p>
+          <p class="card-text">
+            <a [title]="homeImage.name + ' details'" [routerLink]="['/products', homeImage.id]">
+            {{ homeImage.id }}
+            </a>
+          </p>
+          <app-product-alerts
+            [image]="homeImage"
+            (notify)="onNotify($event)">
+          </app-product-alerts>
         </div>
       </div>
     </div>
